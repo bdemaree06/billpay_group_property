@@ -11,11 +11,11 @@ This script needs to be run from the OpCon server and needs to be pointed to SAM
 
 # Instructions
 There are 5 required command line parameters.
-* FilePath - The path to the input file.
-* PropertyName - The name of the OpCon Property which will store the BillPay groups (fully qualified Schedule or Job Instance Properties are recommended).
-* MsginPath - The full path to SAM's MSGIN folder.
-* MsginUser - The OpCon User Account which will be used to send the $PROPERTY:ADD event.
-* MsginPass - The password fo the OpCon User Account which will be used to send the $PROPERTY:ADD event.
+* **FilePath** - The path to the input file.
+* **PropertyName** - The name of the OpCon Property which will store the BillPay groups (fully qualified Schedule or Job Instance Properties are recommended).
+* **MsginPath** - The full path to SAM's MSGIN folder.
+* **MsginUser** - The OpCon User Account which will be used to send the $PROPERTY:ADD event.
+* **MsginPass** - The password fo the OpCon User Account which will be used to send the $PROPERTY:ADD event.
 
 ## Command Line Example
 ```
