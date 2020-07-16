@@ -1,5 +1,5 @@
-# Project Name
-Project description
+# Collect BillPay Groups
+This script reads an input file to extract the current day's BillPay groups. The groups are then placed into the specified OpCon Property.
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
@@ -7,10 +7,20 @@ No Support and No Warranty are provided by SMA Technologies for this project and
 SMA Technologies assumes no liability for damage caused by the usage of any of the files offered here via this Github repository.
 
 # Prerequisites
-
+This script needs to be run from the OpCon server and needs to be pointed to SAM's MSGIN folder.
 
 # Instructions
+There are 5 required command line parameters.
+* FilePath - The path to the input file.
+* PropertyName - The name of the OpCon Property which will store the BillPay groups (fully qualified Schedule or Job Instance Properties are recommended).
+* MsginPath - The full path to SAM's MSGIN folder.
+* MsginUser - The OpCon User Account which will be used to send the $PROPERTY:ADD event.
+* MsginPass - The password fo the OpCon User Account which will be used to send the $PROPERTY:ADD event.
 
+## Command Line Example
+```
+powershell.exe -ExecutionPolicy Bypass -File SMABillPay.ps1 -Filepath "C:\ProgramData\OpConxps\Billpay.txt" -PropertyName "SI.BillPay.[[$SCHEDULE DATE]].[[$SCHEDULE NAME]]" -MsginPath "C:\ProgramData\OpConxps\SAM\MSGIN" -MsginUser ocadm -MsginPass [[EventPass]]
+```
 
 # License
 Copyright 2019 SMA Technologies
